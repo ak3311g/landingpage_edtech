@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url('./assets/bg.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+div{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+p{
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 22px;
+}
+
+img{
+    max-width: 100px;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 46px;
+}
+
+.container.nav{
+    padding: 0 20px;
+    height: 70px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo img{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+}
+
+#MenuItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    list-style: none;
+}
+
+#MenuItems li{
+    padding: 0 10px;
+}
+
+#MenuItems li a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row.heading{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 0 auto 80px auto;
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    width: 400px;
+    padding: 50px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories .small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.categories .col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.categories .col-3 img{
+    width: 50px;
+    filter: invert(100%);
+}
+
+.categories .small-container img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img{
+    width: 100%;
+    border-radius: 10px;
+    filter: invert(100%);
+}
+
+.rating{
+    color: #ff523b;
+    font-size: 12px;
+    display: flex;
+}
+
+.rating .star{
+    color: #ff523b;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1080px){
+    .row{
+        text-align: center;
+    }
+
+    .col-2{
+        flex-basis: 100%;
+        padding: 30px 0;
+    }
+
+    .col-2 img{
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .categories .col-3{
+        flex-basis: 49%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    nav{
+        padding: 0 20px;
+    }
+
+    .row.heading{
+        margin: 0 auto 40px;
+    }
+
+    .row.heading h2{
+        font-size: 26px;
+    }
+
+    .categories .col-3{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .menu-icon{
+        display: block;
+    }
+
+    #MenuItems{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #000;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0px;
+    }
+
+    #MenuItems li{
+        display: block;
+        text-align: center;
+    }
+
+    #MenuItems li a{
+        display: inline-block;
+        margin: 10px 0;
+    }
+
+    .menu-icon.active{
+        color: #fff;
+    }
+
+    .row{
+        text-align: center;
+    }
+
+    .col-2{
+        flex-basis: 100%;
+        padding: 30px 0;
+    }
+
+    .col-2 img{
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .categories .col-3{
+        flex-basis: 100%;
+    }
+}
